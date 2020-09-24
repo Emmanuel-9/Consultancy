@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  {% endblock %}
+</head>
+<body>
+{% block content %}
+<h1> Here's how it works </h1>
+<div class="working"><ol><li>Choose Your Coach!<br>
+**Purchase a coaching session with your coach </li>
+
+<li> You will receive an email from your coach. Check your spam!<br>
+**Please note if you book with Apollonia the response time is 24-72 hours.<br>
+
+** Please note if you book an email session we will send you a coaching email template that will help you get the best possible results in 24-48 hours. </li>
+
+<li> Confirm a date and time that your coach will send you by email.<br>
+**Coaching sessions are conducted through Phone and WhatsApp. (Skype, Zoom, and FaceTime Upon request only. Unless purchasing an email session)</li>
+
+<li> We will confirm & call you! Let’s change your life!</li></ol></div>
+<div class="tab" style="background-color: blanchedalmond;">
+    <h1 class="text-center"> CHOOSE YOUR COACH </h1>
+</div>
+  
+
+{% endblock %}
+</body>
+</html>

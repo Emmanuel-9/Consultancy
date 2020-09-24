@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+     {% block styles %}
+     {% bootstrap_css %}
+     <link rel="stylesheet" href="{% static 'styles.css' %}"> 
+      {% endblock %}
+</head>    
+{% block content %}
+
+{% endblock %}
