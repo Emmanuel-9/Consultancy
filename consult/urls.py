@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url,include
 from . import views
 
 urlpatterns=[
@@ -6,9 +6,9 @@ urlpatterns=[
     url('services/',views.services,name='services'),
     url('contact/',views.contact,name='contact'),
     url('coaching/',views.coaching,name='coaching'),
-    url('fees/',views.about,name='about'),
-    url('family/',views.family,name='family'),
-    url('individual',views.individual,name='individual'),
-    url('corporate',views.corporate,name='corporate'),
-    url('register',views.register,name='register') 
+    url('fees/',views.fees,name='fees'),
+    url('register',views.registration,name='register'),
+    url('accounts/', include('django.contrib.auth.urls')), 
+    url('profile/',views.profile,name='profile'),
+    url('FAQ/',views.questions,name='FAQ') 
 ]
