@@ -5,30 +5,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  {% if title %}
-  <title>Moringa Tribune - {{title}}</title>
-  {% else %}
-    <title> Moringa Tribune </title>
-  {% endif %}
+  <title> Consult </title> 
 
   {% block styles %}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="{% static 'styles.css' %}" rel="stylesheet" type="text/css">
   {% endblock %}
 
 </head>
 <body>
-    {% include 'navbar.html' %}
-    {% block content %}
-     <p> An organization that offers therapy to family, individuals and corporates. We thought of heating all three birds with a 
+  {% include 'navbar.html' %}
+  {% block content %}
+  
+  <p> An organization that offers therapy to family, individuals and corporates. We thought of heating all three birds with a 
       stone. Therapy is the same be it to family, individuals and corporates as well. It is a matter of finding a common ground. 
       Individual therapy is finding your own ground, what keeps you going, what motivates, the things you want do on this earth 
       whereas for both family and corporate therapy, it's is finding a comon ground for others to relate with, though it may be in 
       times of the environment but our point is the common ground search. With this, work has being made easier. Therapy search 
       is easy coz if you find us we offer everything, job opportunities in terms of therapists, suppliers and many more. We have 
       being licensed by the government and the logistics are well calcualted so do not worry about our authenticity and we are 
-      here to stay it's not just one time thing.
+      here to stay it's not just one time thing.</p><br>
         <h1 class="text-center"> WHY CHOOSE US </h1>
         <ul>
             <li> Affordable. Our prices are fair.</li>
@@ -36,11 +32,21 @@
             <li> Our facilitators are certified and well experienced hence high quality of service. </li>
             <li> EXistence of a support group where people grow together and even each other in times of need.</li>
         </ul>
-  
-  </p>
+</p>
+<div class="tab" style="background-color:gray;padding-bottom: 50px;">
+    <p> Social feeds </p>
+</div>
+   <div class="tab" style="background-color: black;padding-top: 100px;">
+    <address style="color: whitesmoke;text-align: center;">
+      You can contact us at:<br>
+      TechOnTheNet.com<br>
+      123 Somewhere St.<br>
+      City, State
+    </address>
+   </div>
     
     
-    {%endblock%}
+{%endblock%}
 
     {% block scripts %}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

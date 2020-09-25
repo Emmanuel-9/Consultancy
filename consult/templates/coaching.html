@@ -6,11 +6,12 @@
 <head>
     {% block styles %}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link  href="{% static 'styles.css' %}" rel="stylesheet" type="text/css">
   {% endblock %}
 </head>
-<body>
+
 {% block content %}
+<body>
 <h1> Here's how it works </h1>
 <div class="working"><ol><li>Choose Your Coach!<br>
 **Purchase a coaching session with your coach </li>
@@ -24,10 +25,28 @@
 **Coaching sessions are conducted through Phone and WhatsApp. (Skype, Zoom, and FaceTime Upon request only. Unless purchasing an email session)</li>
 
 <li> We will confirm & call you! Let’s change your life!</li></ol></div>
-<div class="tab" style="background-color: blanchedalmond;">
+<div class="tab">
     <h1 class="text-center"> CHOOSE YOUR COACH </h1>
+    <hr>
+    <div class="coaches">
+      <img src="{% static 'images/coach.png' %}">
+      <img src="{% static 'images/coachez.png'%}">
+      <img src="{% static 'images/coach.png' %}">
+      <img src="{% static 'images/coachez.png'%}">
+      <p>  Brayo    Kevo    Harry   Robert  </p>
+    </div>  
 </div>
-  
+<div class="tab" style="background-color:gray;padding-bottom: 50px;">
+  <p> Social feeds </p>
+</div>
+ <div class="tab" style="background-color: black;padding-top: 100px;">
+  <address style="color: whitesmoke;text-align: center;">
+    You can contact us at:<br>
+    TechOnTheNet.com<br>
+    123 Somewhere St.<br>
+    City, State
+  </address>
+ </div>
 
 {% endblock %}
 </body>

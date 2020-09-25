@@ -3,30 +3,42 @@
 
 {% block style %}
  {% bootstrap_css %}
- <link rel="stylesheet" href="{% static 'styles.css' %}">
+ <link  href="{% static 'styles.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: gray;">
-    <a class="navbar-brand" href="{% url 'home' %}"> Home </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'about' %}"> About <span class="sr-only">(current)</span></a>
+<nav class="nav">
+    <a class="nav__headline" href="{% url 'home' %}"> Home </a>
+     <ul class="nav__list">
+        <li>
+            <a class="nav__link" href="{% url 'services'%}"> Services </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact' %}"> Contact </a>
+        <li>
+            <a class="nav__link" href="{% url 'coaching' %}">Coaching  </a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link" href="{% url 'services'%}"> Services </a>
-          </li>
-        <li class="nav-item" style="padding-left: 500px;">
-            <a class="nav-link" href="{% url 'coaching' %}"><button class="btn btn-success"> Coaching </button> </a>
-          </li>
-          <li class="nav-item" style="padding-right: 100px;">
-            <a class="nav-link" href="/accounts/login"><button class="btn btn-warning"> Login </button> </a>
+        <li>
+          <a class="nav__link" href="{% url 'contact' %}"> Contact </a>
+        </li>
+        <li>
+          <a class="nav__link" href="{% url 'fees' %}"> Fees and FAQ </a>
+        </li>
+          {% if user.is_authenticated %}
+          <li>
+            <a class="nav__link" href="{% url 'profile' %}"> <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+              <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+            </svg></a>
           </li>  
+          <li>
+            <a  href="#"><button class="btn btn-primary"> Appointments </button></a>
+          </li>
+          <li>
+            <a  href="/logout"><button class="btn btn-primary"> Logout </button></a>
+          </li>
+         {% else %}
+         <li>
+          <a  href="/accounts/login"><button class="btn btn-warning"> Login </button> </a>
+        </li> 
+        {% endif %} 
       </ul>
     </div>
   </nav>

@@ -6,12 +6,12 @@
 <head>
 {% block styles %}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="{% static 'styles.css' %}" rel="stylesheet" type="text/css">
   {% endblock %}
 </head>
-<body>
+
 {% block content %}
-   <br>
+<body>
    <div class="card">
       <div class="card-title"> Family Therapy</div>
       <div class="card-body"> Why Family Therapy!<br>
@@ -24,7 +24,7 @@
     </div>
     </div><br>
     <div class="card">
-        <div class="card-title">  <img src="{% static 'images/coachez.png' %}"> Personal Therapy</div>
+        <div class="card-title"> Personal Therapy</div>
         <div class="card-body"> People experience different things at some point in life. Don't take the wrong way but I believe 
             we have faced depression at some point in our lives which was obviously brought about by some situation.Frequently, these 
             situations may be unemployment, relationship issues, self denial, hopelessness and many other that we may know of. It's 
@@ -44,9 +44,23 @@
             very essential for businesses in that every employee has his or her work to do and its codependent with the other employees' 
             work. Team work is very necessary in the work place and in case its not working, we can hrlp with that. We offer corporate 
             therapy where team building and the likes come in.
-        </div>
+        </div><br><br>
     </div>
-
-{% endblock %}
+    <div class="tab" style="background-color:gray;padding-bottom: 50px;">
+        <p> Social feeds </p>
+        <p>   <i class="fab fa-facebook"></i> 
+                   <i class="icon-twitter"></i>
+        </p>
+    </div>
+       <div class="tab" style="background-color: black;padding-top: 100px;">
+        <address style="color: whitesmoke;text-align: center;">
+          You can contact us at:<br>
+          TechOnTheNet.com<br>
+          123 Somewhere St.<br>
+          City, State
+        </address>
+       </div>
 </body>
+{% endblock %}
+
 </html>

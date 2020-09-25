@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+     {% block styles %}
+     {% bootstrap_css %}
+     <link href="{% static 'styles.css' %}" rel="stylesheet" type="text/css"> 
+      {% endblock %}
+</head>    
+{% block content %}
+<body>
+  <a href="{% url 'fees' %}"> Fees </a><br>
+  <a href="{% url 'FAQ' %}"> Common Questions </a>
+  <h1 class="text-center"> Common Questions </h1>
+  <div class="questions">
+      <h3> How do I know I need therapy? </h3>
+      <p> </p>
+      <h3> What if I can't afford? </h3>
+      <p> We are currently working on a financial aid to cater for those unable to 
+          afford the fees required.
+      </p>
+      <h3> For how long should I take therapy? </h3>
+      <p> </p>
+      <h3> Does what we talk about in therapy remain confidential?</h3>
+      <p> Yes, off course. We respect your privacy. You took a big step in trust and we have to respect
+          that. Our clients' confidentiality is determined by clients themselves. For us we are just here 
+          to help that's all.
+      </p>
+      <h3> How do I know I do not need therapy any more? </h3>
+      <p> Your growth through the therapy sessions will determine that. </p>
+  </div>
+
+<div class="tab" style="background-color:gray;padding-bottom: 50px;">
+      <p> Social feeds </p>
+  </div>
+     <div class="tab" style="background-color: black;padding-top: 100px;">
+      <address style="color: whitesmoke;text-align: center;">
+        You can contact us at:<br>
+        TechOnTheNet.com<br>
+        123 Somewhere St.<br>
+        City, State
+      </address>
+     </div>
+</body>     
+{% endblock %}

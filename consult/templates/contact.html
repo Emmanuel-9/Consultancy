@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+     {% block styles %}
+     {% bootstrap_css %}
+     <link href="{% static 'styles.css' %}" rel="stylesheet" type="text/css"> 
+      {% endblock %}
+</head>    
 {% block content %}
+<body>
 <p> We Love hearing from you!
     If you want to get in contact with either me or my team, please fill out one of the appropriate forms below that matches your needs.
     
@@ -8,7 +19,28 @@
     Please understand that "email us here" is not the place for free advice or personalized coaching.
     If you would like personalized coaching click here.</p>
 
+    <div class="container-fluid">
 
+      <form action="mailto:oregadaniel181@gmail.com" method="post">
+        {%csrf_token%}
+    
+        {% bootstrap_form form layout='inline' %}
+        <input type="submit" value="Subscribe">
+      </form>
+    
+    </div>
 
+    <div class="tab" style="background-color:gray;padding-bottom: 50px;">
+        <p> Social feeds </p>
+    </div>
+       <div class="tab" style="background-color: black;padding-top: 100px;">
+        <address style="color: whitesmoke;text-align: center;">
+          You can contact us at:<br>
+          TechOnTheNet.com<br>
+          123 Somewhere St.<br>
+          City, State
+        </address>
+       </div>
+</body>
 
 {% endblock %}

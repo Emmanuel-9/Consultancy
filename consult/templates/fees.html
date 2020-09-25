@@ -6,9 +6,25 @@
 <head>
      {% block styles %}
      {% bootstrap_css %}
-     <link rel="stylesheet" href="{% static 'styles.css' %}"> 
+     <link href="{% static 'styles.css' %}" rel="stylesheet" type="text/css"> 
       {% endblock %}
 </head>    
 {% block content %}
+<body>
+  <a href="{% url 'fees' %}"> Fees </a><br>
+  <a href="{% url 'FAQ' %}"> Common Questions </a>
+  
 
+<div class="tab" style="background-color:gray;padding-bottom: 50px;">
+      <p> Social feeds </p>
+  </div>
+     <div class="tab" style="background-color: black;padding-top: 100px;">
+      <address style="color: whitesmoke;text-align: center;">
+        You can contact us at:<br>
+        TechOnTheNet.com<br>
+        123 Somewhere St.<br>
+        City, State
+      </address>
+     </div>
+</body>     
 {% endblock %}
