@@ -1,22 +1,77 @@
-.nav{
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   padding: 0.5rem;
-   display: grid;
-   grid-template-columns: 25% auto;
-   gap: 10%;
-   background-color: gray;
+nav{
+    background: black;
+    padding-right: 50px;
+}
+nav:after{
+   content: '';
+   clear: both;
+   display: table;
+}
+nav .logo{
+   float: left;
+   color: white;
+   font-size: 27px;
+   font-weight: 600px;
+   line-height: 70px;
+   padding-left: 60px;
+}
+nav ul{
+   list-style: none;
+   float: right;
+   margin-right: 40px;
+   position: relative;
+}
+nav ul li {
+   float: left;
+   display: inline-block;
+   background: black;
+   margin: 0 5px;
+}
+nav ul li a{
+   color: white;
+   text-decoration: none;
+   line-height: 70px;
+   font-size: 18px;
+   padding: 8px 15px;
+}
+nav ul li a:hover{
+   color: cyan;
+   border-radius: 5px;
+   box-shadow: 0 0 5px #33ffff,
+               0 0 5px #66ffff;
+}
+nav ul ul{
+   border-top: 3px solid cyan;
+   position: absolute;
+   top: 90px;
+   opacity: 0;
+   visibility: hidden;
+   transition: top .3s;
+}
+nav ul li:hover > ul{
+   top: 70px;
+   opacity: 1;
+   visibility: visible;
+}
+nav ul ul li{
+   position: relative;
+   margin: 0px;
+   width: 150px;
+   float: none;
+   display: list-item;
+   border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+   line-height: 50px;
+}
+nav ul ul li a:hover{
+   color: cyan;
+   box-shadow: none;
 }
 p{
    font-size: medium;  
    font-family: sans-serif;
    scroll-behavior: smooth;
-}
-.card {
-   background-color: azure;
-   
 }
 .row{
    padding-left: 10px;
@@ -25,41 +80,26 @@ p{
 body{
    padding-left: 30px;
    padding-right: 30px;
-   padding-top: 100px;
-}  
-.nav__headline{
-   font-size: 1rem;
-   color: hotpink;
+   padding-top: 10px;
+   background-color: gainsboro;
+}   
 
-}
-.nav__list{
-   list-style-type: none;
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
-}
-.nav__link{
-   text-decoration: none;
-   color: #040404;
-   font-weight: 600;
-   transition: opacity 200ms ease-in-out;
-   overflow: hidden;
-}
-.nav__link::after{
-   content: '';
-   display: block;
-   width: 0;
-   height: 2px;
-   margin-top: 2px;
-   border-radius: 2px;
-   background: #040404;
-   transition: width 200ms ease-in-out;
-}
-.nav__link.nav--current::after,
-.nav__link:hover::after {
-   width: 100%;
-}
+
 .questions{
    padding: 300px;
    padding-top: 10px;
+}
+.container-fluid{
+   padding-left: 100px;
+   padding-right: 100px;
+}
+.socials{
+   text-align: center;
+   padding-bottom: 50px;
+}
+.vertical{
+   border-left: 3px solid whitesmoke; 
+   height: 200px; 
+   position:absolute; 
+   left: 40%; 
 }
