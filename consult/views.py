@@ -3,27 +3,24 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate,login
-from .forms import ContactForm
+from .forms import ContactForm,UpdateProfileForm
 
 # Create your views here.
 def home(request):
-    return render (request,'base.html')
-
-def services(request):
-    return render(request, 'services.html')
-
-def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             print('valid')
     else:
-        form = ContactForm()        
+        form = ContactForm() 
+    return render (request,'base.html',{"form": form})
 
-    return render(request, 'contact.html')
+def services(request):
+    return render(request, 'services.html')
 
-def fees(request):
-    return render(request, 'fees.html')
+def about(request):      
+    return render(request, 'about.html')
+
 
 def coaching(request):
     return render(request, 'coaching.html')                
@@ -40,7 +37,7 @@ def registration(request):
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             login(request,user)
-            return redirect('login')
+            return redirect('home')
     else:
         form = UserCreationForm()
 
@@ -50,3 +47,21 @@ def registration(request):
 @login_required(login_url='accounts/login')
 def profile(request):
     return render(request, 'profile.html')
+
+def update_profile(request):
+    if request.method == 'POST':
+        form = UpdateProfileForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = UpdateProfileForm() 
+    return render(request,'update-profile.html',{"form": form})    
+
+def cart(request):
+    return render(request,'cart.html') 
+
+def message(request):
+    return render(request,'messages.html')        
+
+def notifications(request):
+    return render(request,'notifications.html')     
