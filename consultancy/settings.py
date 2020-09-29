@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'phonenumber_field',
     'registration',
     'bootstrap4',
     'consult.apps.ConsultConfig',
