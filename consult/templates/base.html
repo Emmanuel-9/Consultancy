@@ -75,12 +75,7 @@
     and we are good to go.
   </p>
   <div class="container-fluid">
-  <form action="mailto:oregadaniel181@gmail.com" method="post">
-    {%csrf_token%}
-
-    {% bootstrap_form form layout='inline' %}
-    <input type="submit" value="Subscribe">
-  </form>
+  
 
 </div><br>
 
@@ -97,6 +92,7 @@
      </div> 
      <div class="vertical"></div>
       <div class="col-md-6">
+        
         <address>
           <p> Ngong Lane, Ngong Lane Plaza. 1st<br>
               Floor. Nairobi, Kenya <br></p>
@@ -110,6 +106,14 @@
             <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#"><i class="fa fa-youtube" aria-hidden="true" style="color: whitesmoke;"></i></a>
+          </div>
+          <div class="column">
+          <form action="mailto:oregadaniel181@gmail.com" method="post" style="padding-right: 50px;padding-left: 350px;padding-top: 10px;">
+            {%csrf_token%}
+        
+            {% bootstrap_form form layout='inline' %}
+            <input type="submit" value="Subscribe">
+          </form>
           </div>
       </div>
       <div class="cookie-container">
