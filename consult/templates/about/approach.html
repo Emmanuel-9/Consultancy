@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block styles %}
+    {% bootstrap_css %}
+    <link  href="{% static 'styles.css' %}" rel="stylesheet" type="text/css">
+  {% endblock %}
+</head>
+
+{% block content %}
+<body>
+  <h2 class="text-center"><strong> How we're different</strong></h2>
+   <div class="row">
+     <div class="col-md-4" style="padding-top: 50px;padding-bottom: 50px;padding-left: 500px;">
+       
+          <img src="{% static 'images/patners.png'%}">
+          <p style="padding-left: 10px;"> Trusted patners</p>
+     </div>
+      <div class="col-md-4" style="padding: 50px 250px;">
+        
+          <img src="{% static 'images/approach.png'%}">
+          <p style="padding-left: 10px;"> Customized Approach</p>
+      </div>
+        <div class="col-md-4" style="padding: 50px 10px;">
+          
+            <img src="{% static 'images/commit.png'%}">
+            <p style="padding-left: 10px;"> Fierce commitment </p>
+        </div>
+   </div>
+   <h3 class="text-center"> HOW WE MEASURE SUCCESS </h3>
+    <ul style="text-indent: 700px;">
+      <li>Are our clients achieving performance breakthroughs?
+        </li>
+      <li>
+        Do our clients refer us to others?
+        </li>
+      <li>
+        Are we doing work aligned to our purpose and values?
+        </li>
+      <li>
+        Is our business financially sustainable?</li>
+      <li>
+        Are we giving back to make our communities and our planet a better place?</li>
+    </ul>
+   
+  
+  
+     
+  
+    
+<div class="tab" style="background-color: #372772; padding: 20px 0;">
+  <h4 class="text-center"> Ready to learn more </h4>
+  <div class="row">
+    <div class="col-md-4" style="padding-left: 500px;"> 
+        <button> About Us </button>
+    </div>
+      <div class="col-md-4" style="padding-left: 250px;">
+        <button> Case Studies  </button>
+      </div>
+        <div class="col-md-4" style="padding-left: 10px;">
+            <button> Contact Us </button>
+        </div>
+  </div>
+</div>   
+    
+ 
+  <div class="tab">
+    <div class="row">
+      <div class="col-md-6" style="padding-left: 400px;padding-top: 100px;">
+        <ul>
+          <li><a href="#" style="color: whitesmoke;"> FAQ </a></li> 
+          <li><a href="#" style="color: whitesmoke;"> Contact Us</a> </li>
+          <li><a href="#" style="color: whitesmoke;"> Privacy policy </a></li>
+        </ul>
+     </div> 
+     <div class="vertical"></div>
+      <div class="col-md-6">
+        <address>
+          <p> Ngong Lane, Ngong Lane Plaza. 1st<br>
+              Floor. Nairobi, Kenya <br></p>
+              <a href="mailto:oregadaniel181@gmail.com" style="color: whitesmoke;"><i class="fa fa-envelope" aria-hidden="true"> contact@consult.info.com </i><br></a>
+              <i class="fa fa-envelope" aria-hidden="true"> P.O BOX 70204 00400 Nairobi </i><br>
+              <a href="https://wa.me/25456345670" style="color: whitesmoke;"><i class="fa fa-whatsapp" aria-hidden="true"> +254 5634 5670</i><br></a>
+              <a href="tel:+25475637890" style="color: whitesmoke;"><i class="fa fa-mobile" aria-hidden="true"> +254 7563 7890</i><br></a>
+        </address><br>
+          <div class="socials">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-youtube" aria-hidden="true" style="color: whitesmoke;"></i></a>
+          </div>
+      </div>
+      <div class="cookie-container">
+        <p> We use coookies in this website to give you the best experience on our site and show you relevant ads. 
+          To find out more read our <a href="#"> privacy policy</a> and <a href="#">cookie policy</a>.
+        </p>
+        <button class="cookie-btn" style="background-color: thistle;">
+           Okay
+        </button>
+      </div> 
+    </div>
+  </div>
+    </div>
+     
+{% endblock %}
+</body>
+</html>
