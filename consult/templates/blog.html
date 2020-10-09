@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block styles %}
+    {% bootstrap_css %}
+    <link  href="{% static 'styles.css' %}" rel="stylesheet" type="text/css">
+  {% endblock %}
+</head>
+
+{% block content %}
+<body>
+ <div class="headlines">
+   <button class="btn btn-warning"> <a href="#"> View all </a> </button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#"> Change management </a> &nbsp;&nbsp;&nbsp;&nbsp;  <a href="#"> Team building </a> &nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="#"> Talent empowerment </a>
+ </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{% static 'images/10.jpeg'%}">
+      </div>
+    </div>
+      <div class="col-md-4"> 
+        <div class="card">
+          <img src="{% static 'images/11.jpeg'%}">
+        </div>
+      </div>
+          <div class="col-md-4"> 
+            <div class="card">
+              <img src="{% static 'images/12.jpeg'%}">
+            </div>
+        </div>
+  </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{% static 'images/13.jpeg'%}">
+        </div>
+      </div>
+        <div class="col-md-4"> 
+          <div class="card">
+            <img src="{% static 'images/14.jpeg'%}">
+          </div>
+        </div>
+            <div class="col-md-4"> 
+              <div class="card">
+                <img src="{% static 'images/15.jpeg'%}">
+              </div>
+          </div>
+    </div><br>
+      
+   
+   <button class="btn btn-info" style="left: 50%;"> Load more </button>
+
+   
+   
+  
+  
+     
+  
+    
+   
+    
+ 
+   <div class="tab">
+    <div class="row">
+      <div class="col-md-6" style="padding-left: 400px;padding-top: 100px;">
+        <ul>
+          <li><a href="#" style="color: whitesmoke;"> FAQ </a></li> 
+          <li><a href="#" style="color: whitesmoke;"> Contact Us</a> </li>
+          <li><a href="#" style="color: whitesmoke;"> Privacy policy </a></li>
+        </ul>
+     </div> 
+     <div class="vertical"></div>
+      <div class="col-md-6">
+        <address>
+          <p> Ngong Lane, Ngong Lane Plaza. 1st<br>
+              Floor. Nairobi, Kenya <br></p>
+              <a href="mailto:oregadaniel181@gmail.com" style="color: whitesmoke;"><i class="fa fa-envelope" aria-hidden="true"> contact@consult.info.com </i><br></a>
+              <i class="fa fa-envelope" aria-hidden="true"> P.O BOX 70204 00400 Nairobi </i><br>
+              <a href="https://wa.me/25456345670" style="color: whitesmoke;"><i class="fa fa-whatsapp" aria-hidden="true"> +254 5634 5670</i><br></a>
+              <a href="tel:+25475637890" style="color: whitesmoke;"><i class="fa fa-mobile" aria-hidden="true"> +254 7563 7890</i><br></a>
+        </address><br>
+          <div class="socials">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-youtube" aria-hidden="true" style="color: whitesmoke;"></i></a>
+          </div>
+      </div>
+      <div class="cookie-container">
+        <p> We use coookies in this website to give you the best experience on our site and show you relevant ads. 
+          To find out more read our <a href="#"> privacy policy</a> and <a href="#">cookie policy</a>.
+        </p>
+        <button class="cookie-btn" style="background-color: thistle;">
+           Okay
+        </button>
+      </div> 
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>
