@@ -9,27 +9,26 @@
 <nav>
    <div class="logo"><a href="{% url 'home' %}"> Consult </a></div>
      <ul>
-        <li> <a href="{% url 'about'%}"> About Us </a></li>
-        <li> <a href="{% url 'services' %}"> Services </a></li>
-        <li> <a href="{% url 'FAQ' %}"> FAQ </a></li>
-        <li> <a href="{% url 'coaching' %}"> Coaching </a></li>
-        {% if user.is_authenticated %}
-        <li> <a href="{% url 'profile' %}"> Profile</a>
+        <li> <a href="{% url 'about'%}"> About Us </a>
+         <ul>
+            <li><a href="{% url 'approach' %}"> Our Approach</a></li>
+            <li><a href="{% url 'purpose' %}"> Our Purpose</a></li>
+            <li><a href="{% url 'career' %}"> Careers</a></li>
+            <li><a href="{% url 'team' %}"> Our Team</a></li>
+            <li><a href="{% url 'recog' %}"> Recognition </a></li>
+         </ul>
+       </li>
+        <li> <a href="{% url 'services' %}"> Services </a>
            <ul>
-            <li> <a href="{% url 'cart' %}"> Cart </a></li>
-            <li> <a href="{% url 'update' %}"> Update Profile</a></li>
-            <li> <a href="{% url 'notifications'%}"> Notifications </a></li>
-            <li> <a href="{% url 'messages'%}"> Messages </a></li>
-            <li> <a href="/logout"> Logout </a></li>
+              <li><a href="{% url 'building' %}"> Team building </a></li>
+              <li><a href="{% url 'conflict' %}"> Conflict resolution </a></li>
+              <li><a href="{% url 'change' %}"> Change management </a></li>
+              <li><a href="{% url 'leadership' %}"> Leadership </a></li>
+              <li><a href="{% url 'talent' %}"> Talent empowerment  </a></li>
+              <li><a href="{% url 'digital' %}"> Digital Marketing </a></li>
            </ul>
-        </li>
-       {% else %} 
-       <li> <a href="/accounts/login"> Login </a></li>
-       {% endif %} 
-     </ul>
-
-
-
-
+        </li> 
+        <li> <a href="{% url 'blog' %}"> Blog </a></li>
+        <li> <a href="{% url 'case' %}"> Case Studies </a></li>
 </nav>
        
