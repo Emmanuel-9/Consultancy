@@ -1,6 +1,8 @@
 nav{
     background: black;
     padding-right: 50px;
+    opacity: 0.8;
+    
 }
 nav:after{
    content: '';
@@ -46,7 +48,7 @@ nav ul ul{
    top: 90px;
    opacity: 0;
    visibility: hidden;
-   transition: top .3s;
+   transition: top .12s;
 }
 nav ul li:hover > ul{
    top: 70px;
@@ -56,7 +58,7 @@ nav ul li:hover > ul{
 nav ul ul li{
    position: relative;
    margin: 0px;
-   width: 150px;
+   width: 250px;
    float: none;
    display: list-item;
    border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -72,19 +74,7 @@ p{
    font-size: medium;  
    font-family: sans-serif;
    scroll-behavior: smooth;
-}
-.row{
-   padding-left: 10px;
-   padding-right: 100px;
-}
-body{
-   padding-left: 30px;
-   padding-right: 30px;
-   padding-top: 10px;
-   background-color: gainsboro;
-}   
-
-
+} 
 .questions{
    padding: 300px;
    padding-top: 10px;
@@ -93,13 +83,61 @@ body{
    padding-left: 100px;
    padding-right: 100px;
 }
-.socials{
-   text-align: center;
-   padding-bottom: 50px;
-}
 .vertical{
    border-left: 3px solid whitesmoke; 
-   height: 200px; 
+   height: 250px; 
    position:absolute; 
-   left: 40%; 
+   left: 45%; 
+}
+.cookie-container{
+   position: fixed;
+   bottom: -100%;
+   left: 0;      
+   right: 0;
+   background: orangered;
+   color: black;
+   padding: 0 32px;
+   transition: 400ms;
+   padding: 10px 10px;
+   opacity: 0.6;
+}
+.cookie-container.active{
+   bottom: 0;
+}
+.tab address a i:hover{
+   color: rgb(238, 118, 82);
+}
+.tab{
+   background-color: rgb(70, 66, 66);
+   padding-top: 50px;
+   color:whitesmoke;
+   position: initial;
+   z-index: -1;
+}
+.socials{
+   padding-bottom: 50px;
+}
+.col .socials a i:hover{
+   color: rgb(238, 118, 82);
+}
+.tab .row .col socials a i{
+   color: whitesmoke;
+}
+.col ul li a:hover{
+   color: rgb(238, 118, 82);
+}
+.counter{
+   user-select: none;
+   color: rgba(red, green, blue, alpha);
+   font-weight: 700;
+   font-size: 1rem;
+   padding: 0 50px;
+}
+.card{
+   position: inherit;
+   z-index: -1;
+}
+
+.headlines{
+   padding: 10px 100px;
 }
