@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'registration',
     'bootstrap4',
     'consult.apps.ConsultConfig',
     'django.contrib.admin',
