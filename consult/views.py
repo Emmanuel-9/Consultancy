@@ -17,9 +17,14 @@ def services(request):
     return render(request, 'services/services.html')
 
 def about(request): 
-           
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm()     
 
-    return render(request, 'about/about.html')
+    return render(request, 'about/about.html',{"form": form})
 
 
 def case_studies(request):

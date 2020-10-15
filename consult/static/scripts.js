@@ -31,3 +31,12 @@ setTimeout(() => {
     cookieContainer.classList.add("active");
     }
 }, 4000);
+
+$(function(){
+   $('.patners').all()
+   $('.patners').technology()
+   $('.patners').health()
+   $('.patners').consumer()
+   $('.patners').families()
+   $('.patners').corporate()
+});
