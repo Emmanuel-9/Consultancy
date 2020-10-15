@@ -1,8 +1,7 @@
 nav{
-    background: black;
-    padding-right: 50px;
-    opacity: 0.8;
-    
+   background: black;
+   opacity: 0.8;
+       
 }
 nav:after{
    content: '';
