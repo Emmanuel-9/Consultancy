@@ -14,12 +14,8 @@
 <body>
  
   <div class="container-fluid" style="padding: 20px 300px;">
-    <form action="mailto:oregadaniel181@gmail.com" method="post">
-      {%csrf_token%}
-  
-      {% bootstrap_form form layout='inline' %}
-      <input type="submit" value="Submit">
-    </form>
+    
+    
   
   </div><br>
    
@@ -33,16 +29,28 @@
     
  
   <div class="tab">
+    <p style="text-indent: 300px;"> For more, you can subscribe to our newsletter and receive daily updates about the firm. Just fill in the form below
+      and we are good to go.
+    </p>
+    <div class="column1">
+      <form action="mailto:oregadaniel181@gmail.com" method="post" style="padding-right: 550px;padding-left: 350px;padding-top: 10px;">
+        {%csrf_token%}
+    
+        {% bootstrap_form form layout='inline' %}
+        <input type="submit" value="Subscribe" style="background-color: burlywood;">
+      </form>
+      </div><br>
     <div class="row">
       <div class="col-md-6" style="padding-left: 400px;padding-top: 100px;">
         <ul>
-          <li><a href="#" style="color: whitesmoke;"> FAQ </a></li> 
+          <li><a href="{% url 'FAQ'%}" style="color: whitesmoke;"> FAQ </a></li> 
           <li><a href="#" style="color: whitesmoke;"> Contact Us</a> </li>
           <li><a href="#" style="color: whitesmoke;"> Privacy policy </a></li>
         </ul>
      </div> 
      <div class="vertical"></div>
       <div class="col-md-6">
+        
         <address>
           <p> Ngong Lane, Ngong Lane Plaza. 1st<br>
               Floor. Nairobi, Kenya <br></p>
@@ -57,6 +65,7 @@
             <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#"><i class="fa fa-youtube" aria-hidden="true" style="color: whitesmoke;"></i></a>
           </div>
+          
       </div>
       <div class="cookie-container">
         <p> We use coookies in this website to give you the best experience on our site and show you relevant ads. 

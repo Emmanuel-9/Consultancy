@@ -15,39 +15,68 @@
   
   <h1 class="text-center"> Common Questions </h1>
   <div class="questions">
-      <h3> How do I know I need therapy? </h3>
+    <button class="accordion">  <h3> How do I know I need therapy? </h3></button>
+      <div class="panel">
+       
       <p> Therapy is for everyone. The society has lied to us that therapy is for the emotionally dangered but 
         that is not usually the case. Though if you find yourself in situations like depression, persistent family 
         wrangles and excetra, it is highly recommendable to go for therapy.    </p>
-      <h3> What if I can't afford? </h3>
-      <p> We are currently working on a financial aid to cater for those unable to 
-          afford the fees required.
-      </p>
-      <h3> For how long should I take therapy? </h3>
-      <p> The estimated time by the therapist. When one is undergoing therapy, one ought to be willing to change. 
-         This factor is crucial because without the willingness there's no point of the therapy considering high chances of 
-         you backsliding are high. But as long as you have a positive attitude towards it and a growth mindset it should be 
-         long. After therapy, you will join a support group where you will be helping one another as you grow together.
-      </p>
-      <h3> Does what we talk about in therapy remain confidential?</h3>
-      <p> Yes, off course. We respect your privacy. You took a big step in trusting us and we truly acknowledge that.
-         Our clients' confidentiality is determined by clients themselves. For us, we are just here 
-          to help that's all.
-      </p>
+      </div>
+   
+       <button class="accordion"> <h3> What if I can't afford? </h3> </button>
+         <div class="panel">
+          
+          <p> We are currently working on a financial aid to cater for those unable to 
+              afford the fees required.
+          </p>
+         </div>
+      
+         <button class="accordion"> <h3> For how long should I take therapy? </h3></button>
+           <div class="panel">
+            
+            <p> The estimated time by the therapist. When one is undergoing therapy, one ought to be willing to change. 
+               This factor is crucial because without the willingness there's no point of the therapy considering high chances of 
+               you backsliding are high. But as long as you have a positive attitude towards it and a growth mindset it should be 
+               long. After therapy, you will join a support group where you will be helping one another as you grow together.
+            </p>
+           </div>
+        
+        <button class="accordion">  <h3> Does what we talk about in therapy remain confidential?</h3> </button>
+     
+          <div class="panel">
+           
+            <p> Yes, off course. We respect your privacy. You took a big step in trusting us and we truly acknowledge that.
+               Our clients' confidentiality is determined by clients themselves. For us, we are just here 
+                to help that's all.
+            </p>    
+          </div>
+      
       
   </div>
 
   <div class="tab">
+    <p style="text-indent: 300px;"> For more, you can subscribe to our newsletter and receive daily updates about the firm. Just fill in the form below
+      and we are good to go.
+    </p>
+    <div class="column1">
+      <form action="mailto:oregadaniel181@gmail.com" method="post" style="padding-right: 550px;padding-left: 350px;padding-top: 10px;">
+        {%csrf_token%}
+    
+        {% bootstrap_form form layout='inline' %}
+        <input type="submit" value="Subscribe" style="background-color: burlywood;">
+      </form>
+      </div><br>
     <div class="row">
       <div class="col-md-6" style="padding-left: 400px;padding-top: 100px;">
         <ul>
-          <li><a href="#" style="color: whitesmoke;"> FAQ </a></li> 
+          <li><a href="{% url 'FAQ'%}" style="color: whitesmoke;"> FAQ </a></li> 
           <li><a href="#" style="color: whitesmoke;"> Contact Us</a> </li>
           <li><a href="#" style="color: whitesmoke;"> Privacy policy </a></li>
         </ul>
      </div> 
      <div class="vertical"></div>
       <div class="col-md-6">
+        
         <address>
           <p> Ngong Lane, Ngong Lane Plaza. 1st<br>
               Floor. Nairobi, Kenya <br></p>
@@ -62,6 +91,7 @@
             <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#"><i class="fa fa-youtube" aria-hidden="true" style="color: whitesmoke;"></i></a>
           </div>
+          
       </div>
       <div class="cookie-container">
         <p> We use coookies in this website to give you the best experience on our site and show you relevant ads. 
@@ -73,5 +103,15 @@
       </div> 
     </div>
   </div>
-</body>     
+   
 {% endblock %}
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="{% static 'scripts.js'%}"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ {% bootstrap_javascript %}
+{% endblock %}
+</body>
+</html>
