@@ -11,7 +11,12 @@
 </head>    
 {% block content %}
 <body>
-   <div class="row">
+  <p style="padding:0px 300px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et congue orci. Integer iaculis arcu sit amet metus fringilla euismod. Curabitur non enim porta, tincidunt massa at, pretium nisi. Mauris finibus ligula sit amet tempus mattis. Mauris varius neque nibh, vel mollis est dapibus sit amet. Maecenas luctus leo tincidunt, lobortis odio vulputate, vehicula neque. Ut molestie tristique leo id dignissim. Quisque ultricies sit amet magna vitae bibendum.</p><br>
+   <p style="padding: 0px 300px;">
+    Nunc massa dolor, imperdiet at erat at, tristique efficitur leo. Quisque bibendum luctus aliquet. Sed nec elit ac enim cursus egestas. Cras fermentum maximus mauris sed hendrerit. Mauris et ligula vitae augue finibus vulputate. Fusce vel tortor posuere arcu vehicula sodales. Maecenas interdum ornare ligula vitae elementum. Aliquam posuere suscipit dui sit amet mattis. Proin suscipit quam lectus, vel vehicula metus sollicitudin et. Vestibulum a elit a nisi varius tempus. Vestibulum ut ante ut orci gravida dapibus. Proin placerat sem sem. Donec vitae ullamcorper odio.
+   </p>
+   <div class="row" style="padding: 0px 300px;">
       <div class="col-md-3">
           <div class="counter" data-target="224">&nbsp;&nbsp;&nbsp;&nbsp; 0 </div>
           <p> Trusted patners </p>
@@ -31,155 +36,142 @@
    </div>
     
 
-    <div class="partners" style="padding: 0px 100px;">
-      <h3 class="text-center"> Our Partners </h3>
-      <div class="row">
-        <div class="col-md-2"><a href="#all"> ALL </a></div>
-        <div class="col-md-2"><a href="#health"> HEALTHCARE </a></div>
-        <div class="col-md-2"><a href="#corporate"> CORPORATE </a></div>
-        <div class="col-md-2"><a href="#technology"> TECHNOLOGY </a></div>
-        <div class="col-md-2"><a href="#consumer"> CONSUMER </a></div>
-        <div class="col-md-2"><a href="#families"> FAMILIES </a></div>
+    
+      <h3 class="text-center"> Our Clientele </h3>
+      <div class="myBtnContainer" style="padding: 5px 300px;">
+         <button class="btn active" onclick="filterSelection('all')"> All </button>&nbsp;&nbsp;&nbsp;&nbsp;
+         <button class="btn" onclick="filterSelection('tech')"> Technology </button>&nbsp;&nbsp;&nbsp;&nbsp;
+         <button class="btn" onclick="filterSelection('corporate')"> Corporate </button>&nbsp;&nbsp;&nbsp;&nbsp;
+         <button class="btn" onclick="filterSelection('health')"> Healthcare </button>&nbsp;&nbsp;&nbsp;&nbsp;
+         <button class="btn" onclick="filterSelection('consumer')"> Consumer </button>&nbsp;&nbsp;&nbsp;&nbsp;
+         <button class="btn" onclick="filterSelection('families')"> Families </button>
       </div>
-    </div>  
-        <div id="all">
+        <div class="row" style="padding: 10px 250px;">
           
-        </div>
-          <div id="health">
-            <div class="row">
-              <div class="col-md-2">
-                <div class="card">
+            <div class="column health">
+              <div class="content">
                   <img src="{% static 'images/kenya.jpeg'%}">
-                </div>  
-              </div>
-                <div class="col-md-2">
-                  <div class="card">
+                </div>
+            </div>
+                <div class="column health">
+                  <div class="content">
                     <img src="{% static 'images/avenue.jpeg'%}">
                   </div>
                 </div>
-                  <div class="col-md-2">
-                    <div class="card">
+                  <div class="column health">
+                    <div class="content">
                       <img src="{% static 'images/john.jpeg'%}">
                     </div>
                   </div>
-                    <div class="col-md-2">
-                      <div class="card">
+                    <div class="column health">
+                      <div class="content">
                         <img src="{% static 'images/medex.jpeg'%}">
                       </div>
                     </div>
-                      <div class="col-md-2">
-                        <div class="card">
+                      <div class="column health">
+                        <div class="content">
                           <img src="{% static 'images/knh.png'%}">
                         </div>
                       </div>
-            </div>
-          </div>
-            <div id="corporate">
-              <div class="row">
-                <div class="col-md-2">
-                  <div class="card">
-                    <img src="{% static 'images/assurance.png'%}">
-                  </div>  
-                </div>
-                  <div class="col-md-2">
-                    <div class="card">
-                      <img src="{% static 'images/zbank.png'%}">
-                    </div>
-                  </div>
-                    <div class="col-md-2">
-                      <div class="card">
-                        <img src="{% static 'images/insurance.jpeg'%}">
-                      </div>
-                    </div>
-                      <div class="col-md-2">
-                        <div class="card">
-                          <img src="{% static 'images/vivo.jpeg'%}">
+                        <div class="column corporate">
+                          <div class="content">
+                            <img src="{% static 'images/assurance.png'%}">
+                          </div>    
                         </div>
-                      </div>
-                        <div class="col-md-2">
-                          <div class="card">
+                          <div class="column corporate">
+                            <div class="content">
+                              <img src="{% static 'images/zbank.png'%}">
+                            </div>
+                          </div>
+                            <div class="column corporate">
+                              <div class="content">
+                                <img src="{% static 'images/insurance.jpeg'%}">
+                              </div>
+                            </div>
+                              <div class="column corporate">
+                                <div class="content">
+                                  <img src="{% static 'images/vivo.jpeg'%}">
+                                </div>
+                              </div>
+                        <div class="column corporate">
+                          <div class="content">
                             <img src="{% static 'images/eka.png'%}">
                           </div>
                         </div>
-                          <div class="col-md-2">
-                            <div class="card">
+                          <div class="column corporate">
+                            <div class="content">
                               <img src="{% static 'images/magnum.jpeg'%}">
                             </div>
                           </div>
-              </div>
-            </div>
-              <div id="technology">
-                <div class="row">
-                  <div class="col-md-2">
-                    <div class="card">
-                      <img src="{% static 'images/sendy.png'%}">
-                    </div>  
-                  </div>
-                    <div class="col-md-2">
-                      <div class="card">
-                        <img src="{% static 'images/wefarm.png'%}">
-                      </div>
-                    </div>
-                      <div class="col-md-2">
-                        <div class="card">
-                          <img src="{% static 'images/dalberg.jpeg'%}">
-                        </div>
-                      </div>
-                        <div class="col-md-2">
-                          <div class="card">
-                            <img src="{% static 'images/emobilis.png'%}">
-                          </div>
-                        </div>
-                          <div class="col-md-2">
-                            <div class="card">
-                              <img src="{% static 'images/techbiz.png'%}">
+                            <div class="column tech">
+                              <div class="content">
+                                <img src="{% static 'images/sendy.png'%}">
+                              </div>  
                             </div>
-                          </div>
-                            <div class="col-md-2">
-                              <div class="card">
+                              <div class="column tech">
+                                <div class="content">
+                                  <img src="{% static 'images/wefarm.png'%}">
+                                </div>
+                              </div>
+                                <div class="column tech">
+                                  <div class="content">
+                                    <img src="{% static 'images/dalberg.jpeg'%}">
+                                  </div>
+                                </div>
+                                  <div class="column tech">
+                                    <div class="content">
+                                      <img src="{% static 'images/emobilis.png'%}">
+                                    </div>
+                                  </div>
+                                    <div class="column tech">
+                                      <div class="content">
+                                        <img src="{% static 'images/techbiz.png'%}">
+                                      </div>
+                                    </div>
+                            <div class="column tech">
+                              <div class="content">
                                 <img src="{% static 'images/iata.png'%}">
                               </div>
                             </div>
-                </div>
-              </div>
-                <div id="consumer">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <div class="card">
-                        <img src="{% static 'images/bigsquare.png'%}">
-                      </div>  
-                    </div>
-                      <div class="col-md-2">
-                        <div class="card">
-                          <img src="{% static 'images/coldstone.png'%}">
-                        </div>
-                      </div>
-                        <div class="col-md-2">
-                          <div class="card">
-                            <img src="{% static 'images/subway.png'%}">
-                          </div>
-                        </div>
-                          <div class="col-md-2">
-                            <div class="card">
-                              <img src="{% static 'images/tropical.png'%}">
-                            </div>
-                          </div>
-                            <div class="col-md-2">
-                              <div class="card">
-                                <img src="{% static 'images/foodplus.png'%}">
-                              </div>
-                            </div>
-                              <div class="col-md-2">
-                                <div class="card">
-                                  <img src="{% static 'images/shoprite.png'%}">
+                                <div class="column consumer">
+                                  <div class="content">
+                                    <img src="{% static 'images/bigsquare.png'%}">
+                                  </div>
                                 </div>
-                              </div>
-                  </div>
-                </div>
-                  <div id="families">
-                    <div class="row"></div>
-                  </div>
-
+                                  <div class="column consumer">
+                                    <div class="content">
+                                      <img src="{% static 'images/coldstone.png'%}">
+                                    </div>
+                                  </div>
+                                    <div class="column consumer">
+                                      <div class="content">
+                                        <img src="{% static 'images/subway.png'%}">
+                                      </div>
+                                    </div>
+                                      <div class="column consumer">
+                                        <div class="content">
+                                          <img src="{% static 'images/tropical.png'%}">
+                                        </div>
+                                      </div>
+                                        <div class="column consumer">
+                                          <div class="content">
+                                            <img src="{% static 'images/foodplus.png'%}">
+                                          </div>
+                                        </div>
+                                          <div class="column consumer">
+                                            <div class="content">
+                                              <img src="{% static 'images/shoprite.png'%}">
+                                            </div>
+                                          </div>
+                                           <div class="column families">
+                                              <div class="content"></div>
+                                           </div>
+        </div>
+          
+        
+         
+                  
+      
       <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="10000">
@@ -227,7 +219,7 @@
       <p style="text-indent: 300px;"> For more, you can subscribe to our newsletter and receive daily updates about the firm. Just fill in the form below
         and we are good to go.
       </p>
-      <div class="column">
+      <div class="column1">
         <form action="mailto:oregadaniel181@gmail.com" method="post" style="padding-right: 550px;padding-left: 350px;padding-top: 10px;">
           {%csrf_token%}
       
@@ -238,7 +230,7 @@
       <div class="row">
         <div class="col-md-6" style="padding-left: 400px;padding-top: 100px;">
           <ul>
-            <li><a href="#" style="color: whitesmoke;"> FAQ </a></li> 
+            <li><a href="{% url 'FAQ'%}" style="color: whitesmoke;"> FAQ </a></li> 
             <li><a href="#" style="color: whitesmoke;"> Contact Us</a> </li>
             <li><a href="#" style="color: whitesmoke;"> Privacy policy </a></li>
           </ul>

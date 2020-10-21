@@ -12,18 +12,8 @@
 
 {% block content %}
 <body>
-    <p> Mauris vel suscipit nibh. Donec sit amet pharetra purus. In pharetra dapibus faucibus. Phasellus hendrerit faucibus volutpat. Integer facilisis lectus sed neque luctus, eget faucibus mauris hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id odio accumsan, auctor lacus eu, eleifend massa. Vivamus in eros convallis, auctor nunc non, maximus neque. Nullam tincidunt lorem sed velit tincidunt, ac molestie sem gravida. Cras tellus nulla, scelerisque sed vehicula sit amet, molestie sollicitudin mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur egestas massa pellentesque elit pharetra volutpat. Sed volutpat lacinia turpis in maximus. Cras tincidunt massa nec ante gravida, in malesuada metus tincidunt. Ut eget laoreet velit. Proin est justo, volutpat a est id, sodales ornare dui.
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam iaculis faucibus accumsan. Integer imperdiet augue nec turpis molestie rutrum. Pellentesque id vulputate libero. Suspendisse libero dui, aliquet vitae rhoncus in, iaculis ac nisl. Quisque viverra finibus lacus vel dignissim. Aliquam in est dapibus, tempus urna fermentum, blandit erat. Morbi magna est, facilisis nec mauris sit amet, elementum pretium mauris.
-        
-        Nulla ut auctor dui. In fringilla pulvinar libero, ac ultrices justo tincidunt at. Nunc malesuada eros et lacus consequat, mattis lobortis arcu aliquam. Pellentesque pretium vulputate pellentesque. Curabitur varius dui eu faucibus aliquet. Cras congue ligula magna, consequat molestie magna viverra nec. Nulla ut ultricies enim. Vivamus vestibulum pellentesque est, ac convallis sapien gravida at. Quisque sagittis sollicitudin tempus. Quisque mollis ac velit ut feugiat. Sed rutrum id dui a viverra. Integer dapibus vulputate nunc at viverra. Ut convallis, augue quis aliquet tempus, ante elit tincidunt tellus, sit amet fringilla tellus massa sed lectus. Vivamus lacus orci, commodo nec urna nec, tincidunt posuere turpis. Phasellus lectus risus, accumsan sollicitudin dui pharetra, commodo malesuada ante.
-        
-        Quisque porta pharetra mi a luctus. Phasellus bibendum odio et velit aliquet commodo. Pellentesque non molestie ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, enim sed sagittis bibendum, turpis leo mattis enim, quis ornare magna lorem dapibus sem. Phasellus viverra fringilla posuere. Nam nec varius eros. Pellentesque eu purus dignissim, iaculis leo at, bibendum leo.
-        
-        Sed lobortis ligula vitae purus varius porta. In lacus lacus, egestas a sodales congue, dapibus id quam. Etiam ornare aliquam nisi, eu sollicitudin quam finibus ac. Donec vitae orci semper, maximus justo in, molestie diam. Duis ullamcorper sollicitudin ante. Suspendisse consequat congue accumsan. Nunc non odio eros. Quisque molestie tincidunt elit, quis fringilla leo congue sit amet. Pellentesque a est vitae tortor placerat molestie sed et nisi. Aliquam et urna pellentesque, luctus ligula ut, porta arcu. Donec ut sapien vel eros auctor tempor.
-    
-    </p> 
-
+   <img src="{% static 'images/cak.png'%}">
+   Certified 
    
    
   
@@ -34,42 +24,55 @@
    
     
  
-    <div class="tab">
-      <div class="row">
-        <div class="col-md-6" style="padding-left: 400px;padding-top: 100px;">
-          <ul>
-            <li><a href="#" style="color: whitesmoke;"> FAQ </a></li> 
-            <li><a href="#" style="color: whitesmoke;"> Contact Us</a> </li>
-            <li><a href="#" style="color: whitesmoke;"> Privacy policy </a></li>
-          </ul>
-       </div> 
-       <div class="vertical"></div>
-        <div class="col-md-6">
-          <address>
-            <p> Ngong Lane, Ngong Lane Plaza. 1st<br>
-                Floor. Nairobi, Kenya <br></p>
-                <a href="mailto:oregadaniel181@gmail.com" style="color: whitesmoke;"><i class="fa fa-envelope" aria-hidden="true"> contact@consult.info.com </i><br></a>
-                <i class="fa fa-envelope" aria-hidden="true"> P.O BOX 70204 00400 Nairobi </i><br>
-                <a href="https://wa.me/25456345670" style="color: whitesmoke;"><i class="fa fa-whatsapp" aria-hidden="true"> +254 5634 5670</i><br></a>
-                <a href="tel:+25475637890" style="color: whitesmoke;"><i class="fa fa-mobile" aria-hidden="true"> +254 7563 7890</i><br></a>
-          </address><br>
-            <div class="socials">
-              <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="#"><i class="fa fa-youtube" aria-hidden="true" style="color: whitesmoke;"></i></a>
-            </div>
-        </div>
-        <div class="cookie-container">
-          <p> We use coookies in this website to give you the best experience on our site and show you relevant ads. 
-            To find out more read our <a href="#"> privacy policy</a> and <a href="#">cookie policy</a>.
-          </p>
-          <button class="cookie-btn" style="background-color: thistle;">
-             Okay
-          </button>
-        </div> 
+   <div class="tab">
+    <p style="text-indent: 300px;"> For more, you can subscribe to our newsletter and receive daily updates about the firm. Just fill in the form below
+      and we are good to go.
+    </p>
+    <div class="column1">
+      <form action="mailto:oregadaniel181@gmail.com" method="post" style="padding-right: 550px;padding-left: 350px;padding-top: 10px;">
+        {%csrf_token%}
+    
+        {% bootstrap_form form layout='inline' %}
+        <input type="submit" value="Subscribe" style="background-color: burlywood;">
+      </form>
+      </div><br>
+    <div class="row">
+      <div class="col-md-6" style="padding-left: 400px;padding-top: 100px;">
+        <ul>
+          <li><a href="{% url 'FAQ'%}" style="color: whitesmoke;"> FAQ </a></li> 
+          <li><a href="#" style="color: whitesmoke;"> Contact Us</a> </li>
+          <li><a href="#" style="color: whitesmoke;"> Privacy policy </a></li>
+        </ul>
+     </div> 
+     <div class="vertical"></div>
+      <div class="col-md-6">
+        
+        <address>
+          <p> Ngong Lane, Ngong Lane Plaza. 1st<br>
+              Floor. Nairobi, Kenya <br></p>
+              <a href="mailto:oregadaniel181@gmail.com" style="color: whitesmoke;"><i class="fa fa-envelope" aria-hidden="true"> contact@consult.info.com </i><br></a>
+              <i class="fa fa-envelope" aria-hidden="true"> P.O BOX 70204 00400 Nairobi </i><br>
+              <a href="https://wa.me/25456345670" style="color: whitesmoke;"><i class="fa fa-whatsapp" aria-hidden="true"> +254 5634 5670</i><br></a>
+              <a href="tel:+25475637890" style="color: whitesmoke;"><i class="fa fa-mobile" aria-hidden="true"> +254 7563 7890</i><br></a>
+        </address><br>
+          <div class="socials">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-youtube" aria-hidden="true" style="color: whitesmoke;"></i></a>
+          </div>
+          
       </div>
+      <div class="cookie-container">
+        <p> We use coookies in this website to give you the best experience on our site and show you relevant ads. 
+          To find out more read our <a href="#"> privacy policy</a> and <a href="#">cookie policy</a>.
+        </p>
+        <button class="cookie-btn" style="background-color: thistle;">
+           Okay
+        </button>
+      </div> 
     </div>
+  </div>
      
 {% endblock %}
 </body>
