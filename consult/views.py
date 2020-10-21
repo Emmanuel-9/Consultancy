@@ -14,7 +14,13 @@ def home(request):
     return render (request,'base.html',{"form": form})
 
 def services(request):
-    return render(request, 'services/services.html')
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request, 'services/services.html',{"form": form})
 
 def about(request): 
     if request.method == 'POST':
@@ -28,56 +34,140 @@ def about(request):
 
 
 def case_studies(request):
-    return render(request, 'case_studies.html')                
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request, 'case_studies.html',{"form": form})                
 
 def questions(request):
-    return render(request, 'questions.html')
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request, 'questions.html',{"form": form})
 
 
 
 def blog(request):
-    return render(request, 'blog.html')
-
-def approach(request):
-    return render(request,'about/approach.html')
-
-def career(request):
-    return render(request,'about/careers.html')
-
-def purpose(request):
-    return render(request,'about/purpose.html')
-
-def recognition(request):
-    return render(request,'about/recognition.html')
-
-def team(request):
-    return render(request,'about/team.html')
-
-def building(request):
-    return render(request,'services/building.html')
-
-def change(request):
-    return render(request,'services/change.html')
-
-def conflict(request):
-    return render(request,'services/conflict.html')
-
-def digital(request):
-    return render(request,'services/digital.html')
-
-def leadership(request):
-    return render(request,'services/leadership.html')
-
-def talent(request):
-    return render(request,'services/talent.html')                    
-
-def contact(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST)
+        form = SubscriptionForm(request.POST)
         if form.is_valid():
             print('valid')
     else:
-        form = ContactForm()  
+        form = SubscriptionForm() 
+    return render(request, 'blog.html',{"form": form})
+
+def approach(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'about/approach.html',{"form": form})
+
+def career(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'about/careers.html',{"form": form})
+
+def purpose(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'about/purpose.html',{"form": form})
+
+def recognition(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'about/recognition.html',{"form": form})
+
+def team(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'about/team.html',{"form": form})
+
+def building(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'services/building.html',{"form": form})
+
+def change(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'services/change.html',{"form": form})
+
+def conflict(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'services/conflict.html',{"form": form})
+
+def digital(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'services/digital.html',{"form": form})
+
+def leadership(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'services/leadership.html',{"form": form})
+
+def talent(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm() 
+    return render(request,'services/talent.html',{"form": form})                    
+
+def contact(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            print('valid')
+    else:
+        form = SubscriptionForm()      
     return render(request,'contact.html',{"form": form})
 
 
