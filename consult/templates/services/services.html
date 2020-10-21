@@ -12,43 +12,44 @@
 
 {% block content %}
 <body>
-    <img src=""
-   <div class="card">
-      <div class="card-title"> Family Therapy</div>
-      <div class="card-body"> Why Family Therapy!<br>
-        We view as the back bone of the society because where would children come from if not for family?
-        Maintaining a family is not easy. Family is a group of people biologically related by blood and destined to be with
-        each other till death. One would say that "I did not ask for this? But do you want to be on your own? ". Family should 
-        not be a burden but sometimes things take a turn. When it gets to you feeling like your family is always on you know 
-        nerves. Look for a common ground that you all can relate with. I know some of you would say 'Easier said than done', well
-        we offer family therapy, so if you need help, feel free to contact us.
-    </div>
-    </div><br>
-    <div class="card">
-        <div class="card-title"> Personal Therapy</div>
-        <div class="card-body"> People experience different things at some point in life. Don't take the wrong way but I believe 
-            we have faced depression at some point in our lives which was obviously brought about by some situation.Frequently, these 
-            situations may be unemployment, relationship issues, self denial, hopelessness and many other that we may know of. It's 
-            human to feel all this, but it's dangerous to burden oneself with those situations. As we all know suicidial thoughts
-            emerge as the last resort when these situations hit their full blown stages. We would like to prevent this by offering our
-            personal therapy services. Seeking for help is not easy for some of us but we would like to encourage you to take the step
-            of accepting things as they are and sort for aid when necessary.
-        </div>
-    </div><br>
+  <video autoplay muted loop id="myVideo">
+    <source src="{% static 'bugsfix.mp4' %}" type="video/mp4">
+  </video>
+  
+  <!-- Optional: some overlay text to describe the video -->
+  <div class="content1">
+    <h1>Heading</h1>
+    <p>Lorem ipsum...</p>
+    <!-- Use a button to pause/play the video with JavaScript -->
+    <button id="myBtn" onclick="myFunction()">Pause</button>
+  </div>
+   
    
     
    
     <div class="tab">
+      <p style="text-indent: 300px;"> For more, you can subscribe to our newsletter and receive daily updates about the firm. Just fill in the form below
+        and we are good to go.
+      </p>
+      <div class="column1">
+        <form action="mailto:oregadaniel181@gmail.com" method="post" style="padding-right: 550px;padding-left: 350px;padding-top: 10px;">
+          {%csrf_token%}
+      
+          {% bootstrap_form form layout='inline' %}
+          <input type="submit" value="Subscribe" style="background-color: burlywood;">
+        </form>
+        </div><br>
       <div class="row">
         <div class="col-md-6" style="padding-left: 400px;padding-top: 100px;">
           <ul>
-            <li><a href="#" style="color: whitesmoke;"> FAQ </a></li> 
+            <li><a href="{% url 'FAQ'%}" style="color: whitesmoke;"> FAQ </a></li> 
             <li><a href="#" style="color: whitesmoke;"> Contact Us</a> </li>
             <li><a href="#" style="color: whitesmoke;"> Privacy policy </a></li>
           </ul>
        </div> 
        <div class="vertical"></div>
         <div class="col-md-6">
+          
           <address>
             <p> Ngong Lane, Ngong Lane Plaza. 1st<br>
                 Floor. Nairobi, Kenya <br></p>
@@ -63,6 +64,7 @@
               <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: whitesmoke;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="#"><i class="fa fa-youtube" aria-hidden="true" style="color: whitesmoke;"></i></a>
             </div>
+            
         </div>
         <div class="cookie-container">
           <p> We use coookies in this website to give you the best experience on our site and show you relevant ads. 
